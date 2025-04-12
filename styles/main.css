@@ -1,0 +1,121 @@
+/* === Ancient Cyber Core === */
+:root {
+    --dark-stone: #0a0a0a;
+    --rune-glow: #00f7ff;
+    --ancient-gold: #d4af37;
+    --void-space: #000000cc;
+}
+
+body {
+    background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=1000') fixed;
+    background-size: cover;
+    color: var(--rune-glow);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.ancient-gate {
+    background: var(--void-space);
+    min-height: 100vh;
+    padding: 2rem;
+    border: 1px solid var(--ancient-gold);
+    box-shadow: 0 0 30px #00f7ff80;
+}
+
+.glyph-title {
+    font-size: 3rem;
+    text-shadow: 0 0 15px var(--rune-glow);
+    letter-spacing: 5px;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    color: var(--ancient-gold);
+    font-style: italic;
+    margin-top: 0;
+}
+
+/* === Portal Cards === */
+.ai-portals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.portal-card {
+    background: #111111bb;
+    border: 1px solid var(--ancient-gold);
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px currentColor;
+}
+
+.portal-card[data-glow="blue"] { color: #00a8ff; }
+.portal-card[data-glow="purple"] { color: #9c27b0; }
+.portal-card[data-glow="teal"] { color: #00bcd4; }
+
+.glyph {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.access-btn {
+    background: transparent;
+    color: inherit;
+    border: 1px solid currentColor;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.access-btn:hover {
+    background: currentColor;
+    color: black;
+}
+
+/* === Search Ritual === */
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.rune-search {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--ancient-gold);
+    color: white;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.energy-pulse {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, var(--rune-glow), transparent);
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
